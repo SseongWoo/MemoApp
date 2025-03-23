@@ -1,5 +1,9 @@
 # 메모 앱 과제 프로젝트
 
+| ![Image](https://github.com/user-attachments/assets/0efa7ce6-7a82-420b-b592-2ae59d80df70) | ![Image](https://github.com/user-attachments/assets/56ab906d-b8b4-4193-a867-f9612a77de2e) |
+|:------:|:------:|
+| 메모 | 답글 |
+
 ## 프로젝트 개요
 
 Flutter 기반의 메모 관리 앱입니다.  
