@@ -29,23 +29,6 @@ class MemoNotifier extends StateNotifier<List<MemoModel>> {
   Future<void> loadMemos() async {
     await memoService.init(); // Hive 초기화
     state = await memoService.getMemos(); // 저장된 메모 불러오기
-    state = [
-      MemoModel(
-        uid: 'memo_test_001', // 고유 ID
-        content: '이것은 다른 사용자가 작성한 테스트 메모입니다.', // 내용
-        time: DateTime.now().subtract(const Duration(minutes: 10)), // 10분 전 작성된 메모
-        writerData: UserModel(
-          uid: 'user_999',
-          name: '테스트 사용자',
-          location: '부산',
-          profileUrl: 'contents/images/path12.png', // 임의의 프로필 이미지 경로
-        ),
-        myComment: false, // 현재 사용자 작성 아님
-        locked: false,
-        reply: [], // 답글 없음
-      ),
-      ...state,
-    ];
     sortByNewest(); // 불러온 메모 최신순 정렬
   }
 
