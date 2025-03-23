@@ -33,31 +33,6 @@ Flutter 기반의 메모 관리 앱입니다.
 - Riverpod을 통한 상태 관리
 - Hive 기반의 로컬 저장소 적용
 
-## 모델 구조
-
-유저 데이터 구조
-```sh
-class UserModel {
-  final String uid;          // 사용자 고유 ID
-  final String name;         // 사용자 이름
-  final String location;     // 소속
-  final String profileUrl;   // 프로필 이미지 경로
-}
-```
-
-메모 데이터 구조
-```sh
-class MemoModel {
-  final String uid;                 // 메모 고유 ID
-  final String content;             // 메모 내용
-  final DateTime time;              // 작성 시간
-  final bool myComment;             // 현재 사용자가 작성자인지 여부
-  final bool locked;                // 잠금 여부
-  final UserModel writerData;       // 작성자 정보
-  final List<MemoModel> reply;      // 답글 리스트
-}
-```
-
 ## 사용한 라이브러리
 
 ```sh
@@ -104,6 +79,31 @@ lib
   ├── header_widget.dart     # 병원명/주소 헤더 위젯
   ├── memo_widget.dart       # 메모 및 답글 표시용 위젯
   └── text_widget.dart       # 경고 문구 등 텍스트 전용 위젯
+```
+
+## 모델 구조
+
+유저 데이터 구조
+```sh
+class UserModel {
+  final String uid;          // 사용자 고유 ID
+  final String name;         // 사용자 이름
+  final String location;     // 소속
+  final String profileUrl;   // 프로필 이미지 경로
+}
+```
+
+메모 데이터 구조
+```sh
+class MemoModel {
+  final String uid;                 // 메모 고유 ID
+  final String content;             // 메모 내용
+  final DateTime time;              // 작성 시간
+  final bool myComment;             // 현재 사용자가 작성자인지 여부
+  final bool locked;                // 잠금 여부
+  final UserModel writerData;       // 작성자 정보
+  final List<MemoModel> reply;      // 답글 리스트
+}
 ```
 
 ## 📌 주요 코드 설명

@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/memo_model.dart';
-import '../models/user_model.dart';
 import '../services/memo_service.dart';
 import '../test_data.dart';
 import '../utils/uid_utils.dart';
